@@ -14,7 +14,7 @@ def projects(request):
     return render(request, "projects/projects.html", context)
 
 """
-display a detail of the project
+display detail of the project
 """
 def projectDetail(request, project_name):
     try:
