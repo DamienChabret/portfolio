@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import Http404, HttpResponse
 from django.shortcuts import render
 
 from .models import Project
@@ -11,4 +11,14 @@ def projects(request):
     context = {
         "projects": projects
     }
-    return render(request, "projects.html", context)
+    return render(request, "projects/projects.html", context)
+
+"""
+display a detail of the project
+"""
+def projectDetail(request, project_name):
+    try:
+        project = Project.objects.get(project_name=project_name)
+    except Project.DoesNotExist:
+        raise Http404("Project does not exist")
+    return render(request, 'projects/projectDetail.html', {"project": project})
