@@ -1,0 +1,15 @@
+{% load static %}
+
+<html lang="fr">
+    <head>
+        <title>{% block title %} Damien Chabret {% endblock %}</title>
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <h1> Mon site portfolio </h1>
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

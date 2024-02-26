@@ -1,12 +1,13 @@
-<!-- Liste des projets -->
-{% if projects %}
+{% extends "base.html" %}
+
+{%block content%}
     <ul>
     {% for project in projects %}
         <li> 
             <a href="{% url 'detail' project.project_name %}"> {{ project.project_name }}  </a> <!-- 'detail' ref to url name -->
         </li>
+    {% empty %}
+        <p> No projects </p>
     {% endfor %}
     </ul>
-{% else %}
-    <p> No projects </p>
-{%endif%}
+{%endblock%}

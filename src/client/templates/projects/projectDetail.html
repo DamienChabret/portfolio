@@ -1,28 +1,33 @@
-<p> {{ project.project_name }} </p>
-<p> {{ project.project_description }} </p>
-programmation langages 
-<ul>
-{% for langage in project.get_used_langages_list %}
-    <li> {{langage}} </li>
-{%endfor%}
-</ul>
+{% extends "base.html" %}
 
-{% if project.usedTools %}
-TOOLS
-<ul>
-{% for tool in project.get_used_tools_list %}
-    <li> {{tool}} </li>
-{%endfor%}
-</ul>
-{% endif %}
+{% block content %}
+    <p> {{ project.project_name }} </p>
+    <p> {{ project.project_description }} </p>
 
-{%if project.usedSkills%}
-SKILLS 
-<ul>
-{% for skill in project.get_used_skills_list %}
-    <li> {{skill}} </li>
-{%endfor%}
-</ul>
-{%endif%}
+    <p> programmation langages </p> 
+    <ul>
+    {% for langage in project.get_used_langages_list %}
+        <li> {{langage}} </li>
+    {%endfor%}
+    </ul>
 
-<p> Github Link : {{ project.github }} </p>
+    {% if project.usedTools %}
+    <p> TOOLS </p>
+    <ul>
+    {% for tool in project.get_used_tools_list %}
+        <li> {{tool}} </li>
+    {%endfor%}
+    </ul>
+    {% endif %}
+
+    {%if project.usedSkills%}
+    <p> SKILLS </p> 
+    <ul>
+    {% for skill in project.get_used_skills_list %}
+        <li> {{skill}} </li>
+    {%endfor%}
+    </ul>
+    {%endif%}
+
+    <p> Github Link : {{ project.github }} </p>
+{% endblock%}
