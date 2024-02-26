@@ -1,9 +1,9 @@
-{% load static %}
-
 <html lang="fr">
     <head>
         <title>{% block title %} Damien Chabret {% endblock %}</title>
-        <link href="{% static 'css/styles.css' %}" rel="stylesheet"/>
+
+        {% load static %}
+        <link href="{% static 'client/styles.css' %}" rel="stylesheet"/>
     </head>
 
     <body>
