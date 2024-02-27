@@ -3,6 +3,9 @@ from django.shortcuts import render
 
 from .models import Project
 
+def index(request):
+    return render(request, "index.html")
+
 def projects(request):
     """
     Display all the projects
