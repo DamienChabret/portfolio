@@ -1,4 +1,4 @@
-from django.http import Http404, HttpResponse
+from django.http import Http404
 from django.shortcuts import render
 
 from .models import Project
@@ -27,7 +27,7 @@ def projectDetail(request, project_name):
         raise Http404("Project does not exist")
     
     return render(
-        request, 'projects/projectDetail.html', 
+        request, '  projects/projectDetail.html', 
         {
             "project": project,
         }
