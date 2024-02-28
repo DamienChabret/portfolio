@@ -4,7 +4,9 @@
     <div id="list-projects">
         {% for project in projects %}
             <div class="project"> <!-- 'detail' ref to url name -->
-                <a href="{% url 'detail' project.project_name %}"> {{ project.project_name }} </a>
+                {% load static %}
+                <img src="{% static 'assets/image-test.jpg'%}"/>
+                <a href="{% url 'detail' project.project_url %}"> <p> {{ project.project_name }} </p> </a>
             </div> 
            {% empty %}
             <div id="no-projects">

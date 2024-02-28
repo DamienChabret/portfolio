@@ -1,6 +1,7 @@
 from django.db import models
 
 class Project(models.Model):
+    project_url = models.CharField(max_length=30, blank = True)  
     project_name = models.CharField(max_length=30)
     project_description = models.CharField(max_length=300)
     usedLangages = models.CharField(max_length=100)

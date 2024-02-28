@@ -18,13 +18,13 @@ def projects(request):
     return render(request, "projects/projects.html", context)
 
 
-def projectDetail(request, project_name):
+def projectDetail(request, project_url):
     """
     display detail of the project
     """
 
     try:
-        project = Project.objects.get(project_name=project_name)
+        project = Project.objects.get(project_url=project_url)
 
     except Project.DoesNotExist:
         raise Http404("Project does not exist")
