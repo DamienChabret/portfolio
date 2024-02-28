@@ -7,7 +7,10 @@
             <a href="{% url 'detail' project.project_name %}"> {{ project.project_name }}  </a> <!-- 'detail' ref to url name -->
         </li>
     {% empty %}
-        <p> No projects </p>
+        <div id="no-projects">
+            <h1 > No projects </h1>
+            <hr class="rectangle">
+        </div>
     {% endfor %}
     </ul>
 {%endblock%}

@@ -1,3 +1,18 @@
 body{
     background-color: red;
+    height: 100%;
+}
+
+#no-projects{
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+.rectangle {
+    height: 0.1px; /* Hauteur du rectangle */
+    width: 300px;
+    border: 2px solid black; /* Couleur de bordure */
+    border-radius: 5px; /* Rayon de bordure */
 }
