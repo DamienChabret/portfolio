@@ -1,3 +1,6 @@
+Avoir dossier dans lequel on créer un fichier, ce qui créer dans le compte l'idée
+Possiblité de clique droit, créer, etc... pour ê plus rapide
+
 Chaque création de projets depuis le site, créer un répot github
 possibilité de link son compte github
 
