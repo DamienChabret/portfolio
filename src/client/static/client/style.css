@@ -1,6 +1,8 @@
 body{
     background-color: #F4F2F3;
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 /* projects */
@@ -11,23 +13,23 @@ body{
     text-align: center;
 }
 
-#list-projects {
+/* #list-projects {
     padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 100px; /* Augmentation de l'espace entre les éléments */
+    grid-gap: 100px; 
     justify-content: center; 
-    margin: 0 auto; /* Ajout de cette ligne pour centrer la grille horizontalement */   
+    margin: 0 auto; 
 }
 
 .project{
     background-color: #9EBC9F;
-    width: 380px; /* 25% width for 4 projects in a row, minus margin */
+    width: 380px; 
     height: 350px;
     border-radius: 24px;
     transition: 0.3s;
     overflow: hidden;
-    position: relative; /* La position relative est nécessaire pour que les positions absolues à l'intérieur soient relatives à cette div */
+    position: relative;
 }
 
 .project:hover{
@@ -41,23 +43,129 @@ body{
 }
 
 .project a {
-    position: absolute; /* Position absolue par rapport à la div parente */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%; /* Le lien prendra toute la largeur de la div parente */
-    height: 100%; /* Le lien prendra toute la hauteur de la div parente */
-    text-decoration: none; /* Supprimer la décoration du lien */
+    width: 100%; 
+    height: 100%; 
+    text-decoration: none; 
     background-color: transparent; 
 }
 
 .project a p {
-    position: absolute; /* Le lien est positionné par rapport à la div parente */
-    bottom: 0; /* Le lien sera positionné au bas de la div parente */
-    left: 0; /* ou right: 0; si vous voulez qu'il soit à droite */
-    background-color: rgba(255, 255, 255, 0.5); /* Arrière-plan semi-transparent pour une meilleure lisibilité */
-    padding: 15px; /* Marge intérieure pour un meilleur espacement */
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 15px; 
     color : #333;
     width: 100%;
     text-align: center;
     font-size: 20px;
+} */
+
+/* carrousel */
+.container {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.carousel {
+    position: relative;
+    background-color: red;
+}
+
+.carousel-list-projects {
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.project {
+    flex: 0 0 100%;
+    height: 100%;
+    transition: .5s ease-in-out;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrer verticalement les enfants */
+    z-index: 5;
+  
+}
+
+.carousel-controls button {
+    width: 100px;
+    height: 100%; 
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+#prev,#next {
+    color: rgba(255, 255, 255, 0.475); /* Couleur souhaitée */
+}
+
+#prev:hover,#next:hover {
+    color: rgba(255, 255, 255, 1); /* Couleur souhaitée */
+}
+
+#prev:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.00)); /* Dégradé pour prev */
+}
+
+#next:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.00)); /* Dégradé pour next */
+}
+
+
+/* control points */
+.carousel-dots {
+    position: absolute;
+    /* Les points sont absolument positionnés */
+    z-index: 5;
+    /* Ils sont placés au-dessus des autres éléments */
+    left: 50%;
+    /* La distance à gauche est de 50% */
+    right: 50%;
+    /* La distance à droite est de 50% */
+    bottom: 10%;
+    /*La distance du bas est de 10% */
+    display: flex;
+    /* Affiche les points en ligne */
+    justify-content: center;
+    /* Centrage des points */
+}
+/* Style des points de contrôle */
+.carousel-dots .dot {
+    border-radius: 50%;
+    /* Les points sont en forme de cercle */
+    margin: 5px;
+    /* Ajout d'un margin pour un meilleur contrôle */
+    cursor: pointer;
+    /* Curseur en forme de main pour un meilleur contrôle */
+}
+/* Styles pour les points de navigation du carrousel */
+.carousel-dots .active {
+    /* Border de 10px pour le point actif */
+    border: 10px solid #761530 !important;
+    /* !important permet de surcharger les autres styles éventuels */
+}
+.carousel-dots .inactive {
+    /* Border de 10px pour les points inactifs */
+    border: 10px solid #2596be;
 }
