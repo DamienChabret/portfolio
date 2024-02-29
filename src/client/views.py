@@ -35,3 +35,6 @@ def projectDetail(request, project_url):
             "project": project,
         }
     )
+
+def test(request):
+    return render(request, 'test.html')

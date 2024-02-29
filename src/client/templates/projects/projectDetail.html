@@ -4,14 +4,14 @@
     <p> {{ project.project_name }} </p>
     <p> {{ project.project_description }} </p>
 
-    <p> programmation langages </p> 
+    <p> Technologies </p> 
     <ul>
-    {% for langage in project.get_used_langages_list %}
-        <li> {{langage}} </li>
+    {% for technology in project.get_used_technologies_list %}
+        <li> {{technology}} </li>
     {%endfor%}
     </ul>
 
-    {% if project.usedTools %}
+    {% if project.project_tools %}
     <p> TOOLS </p>
     <ul>
     {% for tool in project.get_used_tools_list %}
@@ -20,7 +20,7 @@
     </ul>
     {% endif %}
 
-    {%if project.usedSkills%}
+    {%if project.project_skills%}
     <p> SKILLS </p> 
     <ul>
     {% for skill in project.get_used_skills_list %}
@@ -29,5 +29,5 @@
     </ul>
     {%endif%}
 
-    <p> Github Link : {{ project.github }} </p>
+    <p> Github Link : {{ project.project_github }} </p>
 {% endblock%}

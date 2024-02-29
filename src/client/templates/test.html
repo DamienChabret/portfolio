@@ -1,0 +1,51 @@
+<html>
+<head>
+    {% load static %}
+        <link href="{% static 'client/test.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="carousel">
+        <div class="slide active">
+            <div class="carousel-caption">
+                {% load static %}
+                <img class="img" src="{% static 'assets/image-test.jpg'%}"/>
+                <h3>1ere Image</h3>
+                <p>Voici la (taataataaaa) première image ;p</p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="carousel-caption">
+                {% load static %}
+                <img class="img" src="{% static 'assets/image-test.jpg'%}"/>
+                <h3>Second slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="carousel-caption">
+                {% load static %}
+                <img class="img" src="{% static 'assets/image-test.jpg'%}"/>
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+        </div>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function moveSlide(n) {
+            showSlide(currentSlide + n);
+        }
+    </script>
+</body>
+</html>
