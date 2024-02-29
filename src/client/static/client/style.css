@@ -66,13 +66,18 @@ body{
 
 /* carrousel */
 .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* ou toute autre largeur que vous préférez */
+    max-height: 90vh; /* ou toute autre hauteur maximale que vous préférez */
     overflow: hidden;
     padding: 10px;
 }
 
 .carousel {
     position: relative;
-    background-color: red;
 }
 
 .carousel-list-projects {
