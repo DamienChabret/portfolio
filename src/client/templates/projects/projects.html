@@ -1,64 +1,40 @@
 {% extends "base.html" %}
 
 {%block content%}
-{% comment %}
-    <div id="list-projects">
-        {% for project in projects %}
-            <div class="project"> <!-- 'detail' ref to url name -->
+
+{% if projects %}
+    <div class="container">
+        <div class="carousel">
+            <!-- carousel -->
+            <div class="carousel-list-projects">
+                {% for project in projects %}
+                <div class="project"> <!-- 'detail' ref to url name -->
+                    {% load static %}
+                    <img src="{% static 'assets/image-test.jpg'%}"/>
+                    <!--   <a href="{% url 'detail' project.project_url %}"> <p> {{ project.project_name }} </p> </a>      -->
+                </div>       
+                {% endfor %}
+            </div>
+
+            <!-- controllers -->
+            <div class="carousel-controls">
                 {% load static %}
-                <img src="{% static 'assets/image-test.jpg'%}"/>
-                <a href="{% url 'detail' project.project_url %}"> <p> {{ project.project_name }} </p> </a>
-            </div> 
-           {% empty %}
-            <div id="no-projects">
-                <h1 > No projects </h1>
-                <hr class="rectangle">
+                <button id="prev"> <i class="fa-solid fa-angle-left fa-2xl"></i> </button>
+                <button id="next"> <i class="fa-solid fa-angle-right fa-2xl"></i> </button>
             </div>
-        {% endfor %}
-    </div>    
-{% endcomment %}
 
- <div class="container">
-    <div class="carousel">
-        <!-- carousel -->
-        <div class="carousel-list-projects">
-            <div class="project">
-                <!-- Image de la première diapositive -->
-                <img src="https://images.pexels.com/photos/1242764/pexels-photo-1242764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="Image 1">
-            </div>
-            <div class="project">
-                <!-- Image de la deuxième diapositive -->
-                <img src="https://images.pexels.com/photos/1329711/pexels-photo-1329711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2p"
-                    alt="Image 2">
-            </div>
-            <div class="project">
-                <!-- Image de la troisième diapositive -->
-                <img src="https://images.pexels.com/photos/3183132/pexels-photo-3183132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="Image 3">
-            </div>
-            <div class="project">
-                <!-- Image de la quatrième diapositive -->
-                <img src="https://images.pexels.com/photos/2739013/pexels-photo-2739013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="Image 4">
-            </div>
-            <div class="project">
-                <!-- Image de la cinquième diapositive -->
-                <img src="https://images.pexels.com/photos/3555161/pexels-photo-3555161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="Image 5">
-            </div>
+            <!-- navigations -->
+            <div class="carousel-dots"></div>
         </div>
-
-        <!-- controllers -->
-        <div class="carousel-controls">
-            {% load static %}
-            <button id="prev"> <i class="fa-solid fa-angle-left fa-2xl"></i> </button>
-            <button id="next"> <i class="fa-solid fa-angle-right fa-2xl"></i> </button>
-        </div>
-
-        <!-- navigations -->
-        <div class="carousel-dots"></div>
     </div>
-</div>
-<script src="https://kit.fontawesome.com/852c895433.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/852c895433.js" crossorigin="anonymous"></script>
+    {% load static %}
+    <script src="{% static 'js/carrousel.js'%}"></script>
+{%else%}
+    <div id="no-projects">
+        <h1 > No projects </h1>
+        <hr class="rectangle">
+    </div>
+{% endif%}
+
 {%endblock%}
