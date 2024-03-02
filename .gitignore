@@ -14,3 +14,4 @@ staticfiles/
 
 # Secret keys
 .env
+src/client/static/assets/project-images/

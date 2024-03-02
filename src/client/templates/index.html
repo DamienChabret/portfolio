@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="portfolio-container">
+  
+    <h1 id="test">Damien Chabret</h1> 
+
+    <p>bienvenue sur mon site portfolio</p>
+    <div class="portfolio-rectangle"></div> 
+    <a href="{% url 'projects' %}"><button> Accéder au site </button></a>
+</div>
+
+{% load static %}
+<script src="{% static 'js/writingAnimation.js'%}"></script>
+  
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>{% block title %} Damien Chabret {% endblock %}</title>
+        
+        {% load static %}
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/logo-dc-white.ico' %}">
+    </head>
+
+    <body>
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

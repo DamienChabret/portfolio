@@ -1,0 +1,25 @@
+Avoir dossier dans lequel on créer un fichier, ce qui créer dans le compte l'idée
+Possiblité de clique droit, créer, etc... pour ê plus rapide
+
+Chaque création de projets depuis le site, créer un répot github
+possibilité de link son compte github
+
+Avoir une partie dans le proejt, privée, avec les différentes idées 
+
+catégories de projets
+
+en :
+django (python) - vue (5.0.2)
+??? - back 
+
+
+Notes :
+lancer serv de dev :
+./manage.py runserver
+
+une fois création model : 
+- python manage.py makemigrations {nomApp}
+
+// 
+Projets 
+Categories 

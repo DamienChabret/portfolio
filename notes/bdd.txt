@@ -1,0 +1,5 @@
+Utilisateur : idUser, nomUser, prenomUser, identifiantUser, mailUser
+Projets : idProject, lienProject, nomProject, descriptionProject, ...
+Idees : idNom, text
+
+SQlite 

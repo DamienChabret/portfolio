@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p> {{ project.project_name }} </p>
+    <p> {{ project.project_description }} </p>
+
+    <p> Technologies </p> 
+    <ul>
+    {% for technology in project.get_used_technologies_list %}
+        <li> {{technology}} </li>
+    {%endfor%}
+    </ul>
+
+    {% if project.project_tools %}
+    <p> TOOLS </p>
+    <ul>
+    {% for tool in project.get_used_tools_list %}
+        <li> {{tool}} </li>
+    {%endfor%}
+    </ul>
+    {% endif %}
+
+    {%if project.project_skills%}
+    <p> SKILLS </p> 
+    <ul>
+    {% for skill in project.get_used_skills_list %}
+        <li> {{skill}} </li>
+    {%endfor%}
+    </ul>
+    {%endif%}
+
+    <p> Github Link : {{ project.project_github }} </p>
+{% endblock%}
