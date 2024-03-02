@@ -8,6 +8,7 @@ class Project(models.Model):
     project_tools = models.CharField(max_length=100, blank = True)
     project_skills = models.CharField(max_length=100, blank = True)
     project_github = models.CharField(max_length=100, blank = True)
+    project_image_path = models.CharField(max_length=100, blank = True)
 
     def get_used_skills_list(self):
         """

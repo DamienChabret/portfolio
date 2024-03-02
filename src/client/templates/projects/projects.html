@@ -8,10 +8,11 @@
             <!-- carousel -->
             <div class="carousel-list-projects">
                 {% for project in projects %}
-                <div class="project"> <!-- 'detail' ref to url name -->
+                <div class="project">
                     {% load static %}
-                    <img src="{% static 'assets/image-test.jpg'%}"/>
-                    <!--   <a href="{% url 'detail' project.project_url %}"> <p> {{ project.project_name }} </p> </a>      -->
+                    {% static "" as baseUrl %}
+                    <img src="{{baseUrl}}{{project.project_image_path}}.jpg"/>
+                    <div class="project-name">{{ project.project_name }}</div>
                 </div>       
                 {% endfor %}
             </div>
