@@ -1,10 +1,12 @@
 from django.http import Http404
 from django.shortcuts import render
 
+from client.templatesEnum import TemplateEnum
+
 from .models import Project
 
 def index(request):
-    return render(request, "index.html")
+    return render(request, TemplateEnum.INDEX_WIEW.value)
 
 def projects(request):
     """
@@ -15,7 +17,7 @@ def projects(request):
     context = {
         "projects": projects
     }
-    return render(request, "projects/projects.html", context)
+    return render(request, TemplateEnum.PROJECTS_VIEW.value, context)
 
 
 def projectDetail(request, project_url):
@@ -30,7 +32,7 @@ def projectDetail(request, project_url):
         raise Http404("Project does not exist")
     
     return render(
-        request, 'projects/projectDetail.html', 
+        request, TemplateEnum.PROJECT_VIEW.value, 
         {
             "project": project,
         }

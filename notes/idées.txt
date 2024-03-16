@@ -8,6 +8,8 @@ Avoir une partie dans le proejt, privée, avec les différentes idées
 
 catégories de projets
 
+créer un widget windows qui peut-être liés avec l'application, le principe du widget s'occupe de lire les choses à faire 
+
 en :
 django (python) - vue (5.0.2)
 ??? - back 
@@ -23,3 +25,11 @@ une fois création model :
 // 
 Projets 
 Categories 
+
+
+Donc en gros : 
+MyProject :
+- Mes projets 
+- Projets par catégories
+- Idée 
+- A faire (avec widget disponibles)
