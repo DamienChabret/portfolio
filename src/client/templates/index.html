@@ -8,6 +8,11 @@
 
     <p>bienvenue sur mon site portfolio</p>
     <div class="portfolio-rectangle"></div> 
+
+    {% block projectsBlock %}
+
+    {% endblock %}
+
     <a href="{% url 'projects' %}"><button> Accéder au site </button></a>
 </div>
 
