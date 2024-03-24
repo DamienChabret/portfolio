@@ -23,7 +23,7 @@ une fois création model :
 - python manage.py makemigrations {nomApp}
 
 // 
-Projets 
+Projets => project_url => project_name without espace
 Categories 
 
 
@@ -33,3 +33,5 @@ MyProject :
 - Projets par catégories - publics (avec des projets privée et publics)
 - Idée - privée
 les idées se regroupent comme des idées, une liste de projets et lorsqu'on clique dessus cela emmène sur une liste d'idées  
+
+Savoir dans quelle cadre le projet à été réalisés

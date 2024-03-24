@@ -6,59 +6,112 @@ body{
 }
 
 /* projects */
-#no-projects{
-    position: absolute; 
-    top: 50%; left: 50%; 
-    transform: translate(-50%, -50%); 
+#no-projects {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
+
 .projects {
     margin: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Définissez le nombre de colonnes en fonction de la taille des projets */
-    grid-gap: 20px; /* Espacement entre chaque projet */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-gap: 150px; 
 }
 
 .project {
-    width: 200px; /* Définissez la largeur souhaitée pour chaque projet */
-    height: 200px; /* Définissez la hauteur souhaitée pour chaque projet */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Centrer le texte à l'intérieur de chaque projet */
-    border: 1px solid #ccc; /* Ajouter une bordure pour séparer les projets */
+    width: 300px; 
+    height: 300px;
+    position: relative;
+    overflow: hidden; 
+    border: 1px solid #ccc; 
+}
+
+.project:hover{
+    transform: scale(1.2); /* Agrandissement de 20% lors du survol */
+}
+
+.project a {
+    text-decoration: none; 
+    color: #ffffff;
 }
 
 .project img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; /* Pour que l'image couvre tout l'espace disponible */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
-.project-name,
-.project-description {
-    overflow: hidden; 
-    white-space: nowrap; 
-    text-overflow: ellipsis;
+.text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.01), rgba(7, 7, 7, 0.3)); /* Dégradé du haut vers le bas */
+    padding: 10px;
+    box-sizing: border-box; 
 }
+
+.text-overlay div{
+    bottom: 0;
+}
+
+.project-name {
+    font-weight: bold; 
+}
+
+.project-description {
+    font-style: italic; 
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* projects details */
+#project-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+#project-top {
+    display: flex;
+    align-items: center;
+    background-color: #555;
+    margin: 10px;
+    color : white;
+}
+
+#project-top img {
+    margin-right: 10px;
+    width: 150px;
+    height: 150px;
+    margin : 10px;
+}
+
+#project-bottom {
+    display: flex; 
+}
+
+#project-middle {
+    flex: 3; 
+    margin: 10px;
+    background-color: #555;
+}
+
 #project-info {
-    position: fixed;
-    top: 0; /* Aligner en haut */
-    right: 0;
+    flex: 1; /* Prend 1/4 de l'espace disponible */
     width: 25%;
     height: 70%;
     background-color: #7b787894;
     overflow-y: auto;
-    padding: 20px;
     box-sizing: border-box;
-    float: right;
-    margin: 20px;
-    margin-top: calc(100px + 20px); /* Espacement par rapport aux éléments au-dessus */
+    margin: 10px;
 }
-
 
 .p-title{
     font-weight: bold;
@@ -79,29 +132,53 @@ body{
 
 /* Styling navbar */
 .navbar {
-    background-color: #333; /* Background color */
-    padding: 15px 0; /* Padding */
+    background-color: #333; 
+    padding: 15px 0; 
 }
 
 .navbar-list {
-    list-style-type: none; /* Remove bullet points */
-    text-align: center; /* Center-align list items */
+    list-style-type: none;
+    text-align: center;
 }
 
 .navbar-item {
-    display: inline-block; /* Display items in a line */
-    margin-right: 20px; /* Spacing between items */
+    display: inline-block; 
+    margin-right: 20px;
 }
 
 .navbar-link {
-    color: #fff; /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-size: 16px; /* Font size */
-    padding: 10px 15px; /* Padding */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 16px; 
+    padding: 10px 15px; 
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .navbar-link:hover {
-    background-color: #555; /* Darker background color on hover */
+    background-color: #555;
+}
+
+/* index */
+.portfolio-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.portfolio-container p{
+    font-size: x-large;
+}
+
+#title {
+    font-size: 70px; 
+}
+
+.portfolio-rectangle {
+    width: 280px; 
+    height: 0.2px; 
+    background-color: #000000;
+    margin: 20px auto; 
 }
