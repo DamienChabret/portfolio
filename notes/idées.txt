@@ -29,7 +29,7 @@ Categories
 
 Donc en gros : 
 MyProject :
-- Mes projets 
-- Projets par catégories
-- Idée 
-- A faire (avec widget disponibles)
+- Mes projets [EN COURS] - publics
+- Projets par catégories - publics (avec des projets privée et publics)
+- Idée - privée
+les idées se regroupent comme des idées, une liste de projets et lorsqu'on clique dessus cela emmène sur une liste d'idées  
