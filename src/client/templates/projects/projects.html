@@ -3,13 +3,16 @@
 {%block content %}
 
 {% if projects %}
-    <div class="container">
+    <div class="projects">
         {% for project in projects %}
         <div class="project">
-            {% load static %}
-            {% static "" as baseUrl %}
-            <img src="{{baseUrl}}{{project.project_image_path}}.jpg"/>
-            <div class="project-name">{{ project.project_name }}</div>
+            <a href="{{project.project_url}}">
+                {% load static %}
+                {% static "" as baseUrl %}
+                <img src="{{baseUrl}}{{project.project_image_path}}.jpg"/>
+                <div class="project-name">{{ project.project_name }}</div>
+                <div class="project-description">{{ project.project_description }}</div>
+            </a>
         </div>       
         {% endfor %}
     </div>

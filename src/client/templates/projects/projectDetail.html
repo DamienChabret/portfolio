@@ -1,33 +1,61 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p> {{ project.project_name }} </p>
-    <p> {{ project.project_description }} </p>
+<!-- project name-->
+<div id="project-name">
+    {% load static %}
+    {% static "" as baseUrl %}
+    <img src="{{baseUrl}}{{project.project_image_path}}.jpg"/>
+    <h1> {{ project.project_name }} </h1>
+</div>
 
-    <p> Technologies </p> 
-    <ul>
-    {% for technology in project.get_used_technologies_list %}
-        <li> {{technology}} </li>
-    {%endfor%}
-    </ul>
+<!-- project info -->
+<div id="project-info">
+    <!-- project description -->
+    <div id="project-description">
+        <p class="p-title"> Description </p>
+        <p> {{ project.project_description }} </p> 
+    </div>
 
-    {% if project.project_tools %}
-    <p> TOOLS </p>
-    <ul>
-    {% for tool in project.get_used_tools_list %}
-        <li> {{tool}} </li>
-    {%endfor%}
-    </ul>
-    {% endif %}
-
+    <!-- projects skills -->
     {%if project.project_skills%}
-    <p> SKILLS </p> 
-    <ul>
-    {% for skill in project.get_used_skills_list %}
-        <li> {{skill}} </li>
-    {%endfor%}
-    </ul>
+    <div id="project-skills">
+        <p class="p-title"> Skills </p> 
+        <ul>
+        {% for skill in project.get_used_skills_list %}
+            <li> {{skill}} </li>
+        {%endfor%}
+        </ul>
+    </div>
     {%endif%}
 
-    <p> Github Link : {{ project.project_github }} </p>
+    <!-- projects technologies-->
+    <div id="project-technologies">
+        <p class="p-title"> Technologies </p> 
+        <ul>
+        {% for technology in project.get_used_technologies_list %}
+            <li> {{technology}} </li>
+        {%endfor%}
+        </ul>
+    </div>
+
+    <!-- projects tools -->
+    {% if project.project_tools %}
+    <div id="project-tools">
+        <p class="p-title"> Tools </p>
+        <ul>
+        {% for tool in project.get_used_tools_list %}
+            <li> {{tool}} </li>
+        {%endfor%}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if project.project_github %}
+    <div id="projects-links">
+        <p class="p-title"> Github Link </p>
+        <p> {{ project.project_github }} </p>
+    </div>
+    {% endif %}
+</div>
 {% endblock%}
