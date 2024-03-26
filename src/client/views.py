@@ -37,6 +37,13 @@ def projectDetail(request, project_url):
             "project": project,
         }
     )
+    
+def login(request):
+    """ 
+    function to log view
+    """
+    return render(request, TemplateEnum.LOGIN_VIEW.value)
+    
 
 def test(request):
     return render(request, 'test.html')

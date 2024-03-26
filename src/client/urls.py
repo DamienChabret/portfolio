@@ -7,5 +7,6 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("projects/", views.projects, name="projects"),
     path("projects/<str:project_url>/", views.projectDetail, name="detail"),
+    path("login",  views.login, name="login"),
     path('admin/', admin.site.urls),
 ]
