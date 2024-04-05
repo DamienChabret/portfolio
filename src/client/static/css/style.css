@@ -1,8 +1,9 @@
 body{
-    background-color: #F4F2F3;
+    background-color: #22333B;
     height: 100%;
     padding: 0;
     margin: 0;
+    color: white;
 }
 
 /* projects */
@@ -15,18 +16,23 @@ body{
 }
 
 .projects {
-    margin: 50px;
-    display: grid;
+    margin: 100px;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    grid-gap: 150px; 
+    grid-gap: 150px;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    flex-wrap: wrap;
 }
-
 .project {
-    width: 300px; 
+    width: 400px; 
     height: 300px;
+    flex: 1 1 400px;
     position: relative;
+    display: relative;
     overflow: hidden; 
-    border: 1px solid #ccc; 
+    background-color: #536b788c;
+    border-radius: 10px;
 }
 
 .project:hover{
@@ -36,34 +42,22 @@ body{
 .project a {
     text-decoration: none; 
     color: #ffffff;
-}
-
-.project img {
+    width: auto;
+    height: auto;
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.01), rgba(7, 7, 7, 0.3)); /* Dégradé du haut vers le bas */
-    padding: 10px;
-    box-sizing: border-box; 
-}
-
-.text-overlay div{
-    bottom: 0;
+    margin: 28px;
 }
 
 .project-name {
     font-weight: bold; 
+    font-size: 50px;
 }
 
 .project-description {
     font-style: italic; 
+    font-size: 30px;
 }
 
 .project-link {
@@ -81,7 +75,7 @@ body{
 #project-top {
     display: flex;
     align-items: center;
-    background-color: #555;
+    background-color: #536b788c;
     margin: 10px;
     color : white;
 }
@@ -100,18 +94,28 @@ body{
 #project-middle {
     flex: 3; 
     margin: 10px;
-    background-color: #555;
+    background-color: #536b788c;
+}
+
+#project-middle > * {
+    margin: 28px;
 }
 
 #project-info {
     flex: 1; /* Prend 1/4 de l'espace disponible */
     width: 25%;
     height: 70%;
-    background-color: #7b787894;
+    background-color: #536b788c;
     overflow-y: auto;
     box-sizing: border-box;
     margin: 10px;
 }
+
+
+#project-info > * {
+    margin: 28px;
+}
+
 
 .p-title{
     font-weight: bold;
@@ -132,7 +136,7 @@ body{
 
 /* Styling navbar */
 .navbar {
-    background-color: #333; 
+    background-color: #536B78; 
     padding: 15px 0; 
 }
 

@@ -7,13 +7,10 @@
         {% for project in projects %}
         <div class="project">
             <a href="{{project.project_url}}">
-            <div class="text-overlay">
-                <div class="project-name">{{ project.project_name }}</div>
-                <div class="project-description">{{ project.project_description }}</div>
-            </div>
-            {% load static %}
-            {% static "" as baseUrl %}
-            <img src="{{baseUrl}}{{project.project_image_path}}.jpg"/>
+                <div class="text-overlay">
+                    <div class="project-name">{{ project.project_name }}</div>
+                    <div class="project-description">{{ project.project_description }}</div>
+                </div>
             </a>
         </div>
         {% endfor %}
