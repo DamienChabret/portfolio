@@ -7,7 +7,7 @@ body{
 }
 
 /* projects */
-#no-projects {
+#no-projects, #no-categories {
     position: absolute;
     top: 50%;
     left: 50%;

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{%block content %}
+
+{% if categories %}
+    <div class="categories">
+        {% for category in categories %}
+        <div class="category">
+            <a href="{{category.category_url}}">
+                <div class="text-overlay">
+                    <div class="category-name">{{ category.category_name }}</div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="https://kit.fontawesome.com/852c895433.js" crossorigin="anonymous"></script>
+{%else%}
+    <div id="no-categories">
+        <h1 > No categories </h1>
+        <hr class="rectangle">
+    </div>
+{% endif%}
+
+{%endblock%}
