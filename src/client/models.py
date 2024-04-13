@@ -9,6 +9,7 @@ class Project(models.Model):
     project_skills = models.CharField(max_length=100, blank = True)
     project_github = models.CharField(max_length=100, blank = True)
     project_image_path = models.CharField(max_length=100, blank = True)
+    project_category = models.ForeignKey("client.Category", verbose_name="Category", on_delete=models.CASCADE, blank=True, null=True)
 
     def get_used_skills_list(self):
         """
@@ -39,3 +40,7 @@ class Project(models.Model):
         if self.project_tools:
             tab = self.project_tools.split(";")
         return tab
+    
+class Category(models.Model):
+    category_url = models.CharField(max_length=30, blank= True)
+    category_name = models.CharField(max_length=30, blank = True)

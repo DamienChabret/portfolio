@@ -1,29 +1,32 @@
-Avoir dossier dans lequel on créer un fichier, ce qui créer dans le compte l'idée
-Possiblité de clique droit, créer, etc... pour ê plus rapide
-
+Pages : 
+- Projets - publics
 Chaque création de projets depuis le site, créer un répot github
 possibilité de link son compte github
-
-Avoir une partie dans le proejt, privée, avec les différentes idées 
-
+Avoir une partie dans le proejt, privée, avec les différentes idées liés au projets
+- Catégories - publics (avec des projets privée et publics)
 catégories de projets
+- Idées 
+Avoir dossier dans lequel on créer un fichier, ce qui créer dans le compte l'idée
+Possiblité de clique droit, créer, etc... pour ê plus rapide
+les idées se regroupent comme des idées, une liste de projets et lorsqu'on clique dessus cela emmène sur une liste d'idées  
+Savoir dans quelle cadre le projet à été réalisés
 
 créer un widget windows qui peut-être liés avec l'application, le principe du widget s'occupe de lire les choses à faire 
 
-en :
-django (python) - vue (5.0.2)
-??? - back 
+Fonctionnalité supplémentaire : 
+créer un widget windows qui peut-être liés avec l'application, le principe du widget s'occupe de lire les choses à faire 
 
+TECHNOLOGIES :
+django (python) (5.0.2)
 
-Notes :
+NOTES :
 lancer serv de dev :
 ./manage.py runserver
 
 une fois création model : 
 - python manage.py makemigrations {nomApp}
 
-// 
-Projets 
+Projets => project_url => project_name without espace
 Categories 
 
 
@@ -33,3 +36,11 @@ MyProject :
 - Projets par catégories - publics (avec des projets privée et publics)
 - Idée - privée
 les idées se regroupent comme des idées, une liste de projets et lorsqu'on clique dessus cela emmène sur une liste d'idées  
+
+
+REALISES =========================>
+- Voir mes projets 
+
+
+EN COURS =========================>
+- Compte utilisateur, connexion, apperçu différent si connexion
