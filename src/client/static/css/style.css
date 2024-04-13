@@ -3,7 +3,7 @@ body{
     height: 100%;
     padding: 0;
     margin: 0;
-    color: white;
+    color : white;
 }
 
 /* projects */
@@ -20,10 +20,21 @@ body{
     display: flex;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     grid-gap: 150px;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
+
+.categories {
+    margin: 100px;
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-gap: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .project {
     width: 400px; 
     height: 300px;
@@ -33,13 +44,28 @@ body{
     overflow: hidden; 
     background-color: #536b788c;
     border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.project:hover{
-    transform: scale(1.2); /* Agrandissement de 20% lors du survol */
+.category {
+    width: 300px;
+    height: 300px;
+    flex: 1 1 400px;
+    position: relative;
+    display: flex; 
+    overflow: hidden; 
+    background-color: #536b788c;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.project a {
+
+.project:hover, .category:hover{
+    transform: scale(1.1); /* Agrandissement de 20% lors du survol */
+    background-color: #ffffff;
+}
+
+.project a, .categories a {
     text-decoration: none; 
     color: #ffffff;
     width: auto;
@@ -50,14 +76,32 @@ body{
     margin: 28px;
 }
 
-.project-name {
+.project:hover .project-name,
+.project:hover .project-description,
+.category:hover .category-name {
+    color: #536b788c;
+}
+
+
+
+.project-name, .category-name {
     font-weight: bold; 
     font-size: 50px;
+    transition: color 0.3s ease;
+}
+
+.category-name {
+    text-align: center; /* Centrage horizontal du texte */
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Centrage horizontal */
+    transform: translate(-50%, -50%);
 }
 
 .project-description {
     font-style: italic; 
     font-size: 30px;
+    transition: color 0.3s ease;
 }
 
 .project-link {
