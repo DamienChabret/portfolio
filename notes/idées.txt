@@ -30,17 +30,4 @@ Projets => project_url => project_name without espace
 Categories 
 
 
-Donc en gros : 
-MyProject :
-- Mes projets [EN COURS] - publics
-- Projets par catégories - publics (avec des projets privée et publics)
-- Idée - privée
-les idées se regroupent comme des idées, une liste de projets et lorsqu'on clique dessus cela emmène sur une liste d'idées  
-
-
-REALISES =========================>
-- Voir mes projets 
-
-
-EN COURS =========================>
-- Compte utilisateur, connexion, apperçu différent si connexion
+Afficher projets par catégorie, individuel, par date, par technologies, ...
